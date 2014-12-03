@@ -1,8 +1,8 @@
-cctv.erb
+#cctv.erb
 
 
-daily1.rb
-#!/usr/bin/env ruby
+#daily1.rb
+
 require 'open-uri'
 require "net/http"
 require 'nokogiri'
@@ -11,7 +11,6 @@ require 'rubygems'
 
 SCHEDULER.every '1h', :first_in => 0 do |job|
 
-#@doc = Nokogiri::HTML(File.open("Daily test status - Brain1.htm"))
 url = 'https://ims-sbgweb.rnd.ki.sw.ericsson.se/wiki/Daily_test_status'
 @doc = Nokogiri::HTML(open(url))
 
@@ -23,7 +22,7 @@ select = []
 number = []
 title = "LLV Simulated"
 moreinfo = @doc.xpath("//td")[13].text
-#name
+
 list.each do |a_tag|
   name1 << @doc.xpath("//td")[a_tag].text
 end  
@@ -35,7 +34,7 @@ name1.each do |a_tag|
      name2 << a_tag
   end
 end
-#color
+
 state = []
 level = [] 
 color = []
@@ -95,7 +94,7 @@ end
 end      
 end
 end
-#push
+
  stocklist = Array.new
 (0..name2.length-1).each do |a|
       stocklist.push({
@@ -113,16 +112,16 @@ end
 
 end
 
-daily2.rb
+#daily2.rb
 
-line.rb
+#line.rb
 
-lsv.rb
+#lsv.rb
 
-parking.rb
+#parking.rb
 
-pie.rb
+#pie.rb
 
-sbg.rb
+#sbg.rb
 
-stock.rb
+#stock.rb
