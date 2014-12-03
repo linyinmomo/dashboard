@@ -11,7 +11,7 @@ require 'rubygems'
 
 SCHEDULER.every '1h', :first_in => 0 do |job|
 
-url = 'https://ims-sbgweb.rnd.ki.sw.ericsson.se/wiki/Daily_test_status'
+url = 'link'
 @doc = Nokogiri::HTML(open(url))
 
 list = [25,30,35,40,45,50,55]
